@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Foster Parent Survey</title>
+    <style>
+        body {
+            background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+            font-family: 'Roboto', sans-serif;
+        }
+
+        label,
+        p {
+            display: block;
+            margin: auto;
+            padding: 3px;
+        }
+
+
+        .container {
+            background-color: #1a2639;
+            border-radius: 20px;
+            color: #d9dad7;
+            display: block;
+            font-weight: 400;
+            margin: 0 auto;
+            padding: 40px 40px;
+            max-width: 550px;
+            width: 100%;
+        }
+
+        header {
+            margin: 0 auto;
+            color: #c24d2c;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .form {
+            margin: 20px auto 10px auto;
+        }
+
+        input[type="submit"] {
+            background-color: #c24d2c;
+            color: #d9dad7;
+            border-radius: 10px;
+            box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+            line-height: 2em;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        input:hover[type="submit"] {
+            background-color: #d9dad7;
+            color: #c24d2c;
+            transition: all 200ms ease-in-out;
+        }
+
+        select {
+            width: 100%;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        input[class="contact-info"],
+        textarea {
+            border-radius: 5px;
+            padding: 5px;
+            width: 97%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title">Foster Parent Survey</h1>
+            <p id="description">Thank you for your time in completing this survey!</p>
+        </header>
+        <form id="survey-form">
+            <div class="form">
+                <label id="name-label">Name</label>
+                <input class="contact-info" id="name" type="text" placeholder="Enter your full name" required />
+            </div>
+            <div class="form">
+                <label id="email-label">Email</label>
+                <input class="contact-info" id="email" type="email" placeholder="Enter your email address" required />
+            </div>
+            <div class="form">
+                <label id="number-label">How many children have you served in the past year?</label>
+                <input class="contact-info" id="number" type="number" min="0" max="30" placeholder="Number" required />
+            </div>
+            <div class="form">
+                <label>How long have you been a foster parent?</label>
+                <select name="years-fostering" id="dropdown">
+                    <option>select one</option>
+                    <option>Up to 1 year</option>
+                    <option>1 to 3 years</option>
+                    <option>3 to 5 years</option>
+                    <option>5+ years</option>
+                </select>
+            </div>
+            <div class="form">
+                <p>How supportive is your agency Caseworker?</p>
+                <label><input class="radio" name="support-caseworker" type="radio" value="very-unsupportive" />Very
+                    Unsupportive</label>
+                <label><input class="radio" name="support-caseworker" type="radio"
+                        value="unsupportive" />Unsupportive</label>
+                <label><input class="radio" name="support-caseworker" type="radio" value="neutral" />Neutral</label>
+                <label><input class="radio" name="support-caseworker" type="radio"
+                        value="supportive" />Supportive</label>
+                <label><input class="radio" name="support-caseworker" type="radio" value="very-supportive" />Very
+                    Supportive</label>
+            </div>
+            <div class="form">
+                <p>How supportive is your DSS Social Worker?</p>
+                <label><input class="radio-dss" name="support-dss" type="radio" value="Very Unsupportive" />Very
+                    Unsupportive</label>
+                <label><input class="radio-dss" name="support-dss" type="radio"
+                        value="Unsupportive" />Unsupportive</label>
+                <label><input class="radio-dss" name="support-dss" type="radio" value="Neutral" />Neutral</label>
+                <label><input class="radio-dss" name="support-dss" type="radio" value="Supportive" />Supportive</label>
+                <label><input class="radio-dss" name="support-dss" type="radio" value="Very Supportive" />Very
+                    Supportive</label>
+            </div>
+            <div class="form">
+                <p>
+                    How else would you be open to supporting the program? <br /> <em>(check all
+                        that apply)</em>
+                </p>
+                <label><input class="checkbox" name="support-program" type="checkbox" value="fosterware" />Host a
+                    FosterWare
+                    party</label>
+                <label><input class="checkbox" name="support-program" type="checkbox" value="committee" />Participate in
+                    a
+                    committee</label>
+                <label><input class="checkbox" name="support-program" type="checkbox" value="event" />Speak
+                    at an event</label>
+            </div>
+            <div class="form">
+                <p>Please provide us with any additional feedback about fostering.</p>
+                <textarea name="comments" id="comments" rows="3" cols="50"
+                    placeholder="Enter any thoughts or comments here..."></textarea>
+            </div>
+            <div class="form">
+                <input id="submit" type="submit" value="Submit" />
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
